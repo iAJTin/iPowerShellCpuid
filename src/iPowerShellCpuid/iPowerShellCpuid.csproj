@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B6FEDBB9-F790-4A8A-B0DE-B393DA56725C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>iPowerShellCpuid</RootNamespace>
+    <AssemblyName>iPowerShellCpuid</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\iPowerShellCpuid.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\iPowerShellCpuid.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="iTin.Core, Version=2.0.0.1, Culture=neutral, PublicKeyToken=91c459d24f0559c7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\iCPUID.1.0.2\lib\net461\iTin.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="iTin.Core.Hardware.Common, Version=1.0.0.1, Culture=neutral, PublicKeyToken=55a914aaf3e07893, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\iCPUID.1.0.2\lib\net461\iTin.Core.Hardware.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="iTin.Core.Hardware.CrossPlatform.Cpuid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=55a914aaf3e07893, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\iCPUID.1.0.2\lib\net461\iTin.Core.Hardware.CrossPlatform.Cpuid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="iTin.Core.Interop.CrossPlatform.Cpuid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1863a70dcfb63184, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\iCPUID.1.0.2\lib\net461\iTin.Core.Interop.CrossPlatform.Cpuid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="iTin.Core.Interop.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1863a70dcfb63184, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\iCPUID.1.0.2\lib\net461\iTin.Core.Interop.Shared.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="iTin.Hardware.Specification.Cpuid, Version=1.0.0.1, Culture=neutral, PublicKeyToken=4854c22d6845e07c, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\iCPUID.1.0.2\lib\net461\iTin.Hardware.Specification.Cpuid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="iTin.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f353418c19ff38d, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\iCPUID.1.0.2\lib\net461\iTin.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\references\System.Management.Automation_3_0\System.Management.Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cmdlets\Items\CpuidImplementedPropertiesCmdlet.cs" />
+    <Compile Include="Cmdlets\Items\CpuidImplementedLeafsCmdlet.cs" />
+    <Compile Include="Cmdlets\Items\CpuidPropertyCmdlet.cs" />
+    <Compile Include="Cmdlets\Items\CpuidLocatePropertyCmdlet.cs" />
+    <Compile Include="Cmdlets\Items\CpuidSubLeafsCmdlet.cs" />
+    <Compile Include="Cmdlets\Items\CpuidIsAvailableCmdlet.cs" />
+    <Compile Include="Cmdlets\Results\PropertyDefinitionResult.cs" />
+    <Compile Include="Cmdlets\Results\SubLeafResult.cs" />
+    <Compile Include="Extensions\TypeExtensions.cs" />
+    <Compile Include="Helpers\MessageHelper.cs" />
+    <Compile Include="Helpers\CreatorHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Cmdlets\Results\LeafResult.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\..\packages\iCPUID.1.0.2\build\net461\iCPUID.targets" Condition="Exists('..\..\packages\iCPUID.1.0.2\build\net461\iCPUID.targets')" />
+  <Import Project="..\..\packages\XmlDoc2CmdletDoc.0.3.0\build\XmlDoc2CmdletDoc.targets" Condition="Exists('..\..\packages\XmlDoc2CmdletDoc.0.3.0\build\XmlDoc2CmdletDoc.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\XmlDoc2CmdletDoc.0.3.0\build\XmlDoc2CmdletDoc.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\XmlDoc2CmdletDoc.0.3.0\build\XmlDoc2CmdletDoc.targets'))" />
+  </Target>
+</Project>
