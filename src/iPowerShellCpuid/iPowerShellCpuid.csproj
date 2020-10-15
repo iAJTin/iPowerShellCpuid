@@ -93,7 +93,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="iPowerShellCpuid.psd1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\..\packages\iCPUID.1.0.2\build\net461\iCPUID.targets" Condition="Exists('..\..\packages\iCPUID.1.0.2\build\net461\iCPUID.targets')" />
   <Import Project="..\..\packages\XmlDoc2CmdletDoc.0.3.0\build\XmlDoc2CmdletDoc.targets" Condition="Exists('..\..\packages\XmlDoc2CmdletDoc.0.3.0\build\XmlDoc2CmdletDoc.targets')" />
