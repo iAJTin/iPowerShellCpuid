@@ -26,7 +26,7 @@ In progress..
  2. Copy Release or Debug output content into C:\Program Files\WindowsPowerShell\Modules\iPowerShellCpuid
  3. Run Windows PowerShell
  4. Type: PS> Import-Module iPowerShellCpuid
- 5. For test, type: PS>Get-CpuidIsAvailable
+ 5. For test, type: PS> Get-CpuidIsAvailable or uses alias PS> Cpuid-Is-Available
  6. If returns True or False, all ok!!
  7. Enjoy ;)
  ```
