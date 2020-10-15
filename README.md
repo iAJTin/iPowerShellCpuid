@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/iAJTin/iPowerShellCpuid/blob/main/nuget/iPowerShellCpuid.png" height="32">
+  <img src="https://github.com/iAJTin/iPowerShellCpuid/blob/main/powershellgallery/iPowerShellCpuid.png" height="32">
 </p>
 <p align="center">
   <a href="https://github.com/iAJTin/iPowerShellCpuid">
