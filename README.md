@@ -24,15 +24,15 @@ iPowerShellCpuid contains a collection of **PowerShell Cmdlets** that allow us t
 #### Manually
 
 
-| Step | Description |
+|Step|Description|
 |:------|:------|
-| 1 | Create the ```iPowerShellCpuid``` folder in ```%programfiles%\WindowsPowerShell\Modules``` |
-| 2 | Copy the contents of the output folder ```Release``` or ```Debug``` into the folder created in the previous step. ```%programfiles%\WindowsPowerShell\Modules\iPowerShellCpuid```. |
-| 3 | Run Windows PowerShell |
-| 4 | For import **iPowerShellCpuid** module, please enter the following command: ```PS> Import-Module iPowerShellCpuid``` |
-| 5 | Now to check that everything is correct, let's check if the [CPUID] instruction is available for our system, please enter the following command: ```PS> Get-CpuidIsAvailable``` or if you prefer, use its alias ```CPUID-Is-Available``` |
-| 6 | In both cases, we must obtain ```True``` or ```False``` as a result, if this is so, perfect is already installed!! |
-| 7 | Enjoy ;) | 
+|1|Create the ```iPowerShellCpuid``` folder in ```%programfiles%\WindowsPowerShell\Modules```|
+|2|Copy the contents of the output folder ```Release``` or ```Debug``` into the folder created in the previous step. ```%programfiles%\WindowsPowerShell\Modules\iPowerShellCpuid```.|
+|3|Run Windows PowerShell|
+|41For import **iPowerShellCpuid** module, please enter the following command: ```PS> Import-Module iPowerShellCpuid```|
+|5|Now to check that everything is correct, let's check if the [CPUID] instruction is available for our system, please enter the following command: ```PS> Get-CpuidIsAvailable``` or if you prefer, use its alias ```CPUID-Is-Available```|
+|6|In both cases, we must obtain ```True``` or ```False``` as a result, if this is so, perfect is already installed!!|
+|7|Enjoy ;)| 
 
 # Usage
 
