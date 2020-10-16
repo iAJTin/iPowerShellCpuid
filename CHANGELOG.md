@@ -18,6 +18,6 @@ All notable changes to this project will be documented in this file.
         \ references          [External references]
         \ src
           \ iPowerShellCpuid  [PowerShell Cmdlets library] 
-        \ tools               [Build documentation script]
+        \ tools               [CPUID PowerShell Cmdlets library]
 
 [1.0.0]: https://github.com/iAJTin/iPoserShellCpuid/releases/tag/v1.0.0

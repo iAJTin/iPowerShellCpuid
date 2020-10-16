@@ -24,7 +24,7 @@ Added
         \ documentation       [Code documentation (md files)]
         \ references          [External references]
         \ src
-          \ iPowerShellCpuid  [PowerShell Cmdlets library] 
+          \ iPowerShellCpuid  [CPUID PowerShell Cmdlets library] 
         \ tools               [Build documentation script]
 
 
