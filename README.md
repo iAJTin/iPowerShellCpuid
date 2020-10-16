@@ -38,14 +38,14 @@ iPowerShellCpuid contains a collection of **PowerShell Cmdlets** that allow us t
 
 ## Examples
 
-| Cmdlet | Alias | Description| Example(s) |
+|Cmdlet|Alias|Description|Example(s)|
 |:------|:------|:----------|
-| Get-CpuidIsAvailable | CPUID-Is-Available | Returns a value that indicates whether this system supports the [CPUID] instruction | [GetCpuidIsAvailable](./documentation/PowerShellCpuid.CmdLets/GetCpuidIsAvailableCmdlet.md) |
-| Get-GetCpuidImplementedLeafs | CPUID-Implemented-Leafs | Returns a collection of elements where each element represents an implemented leaf | [GetCpuidImplementedLeafs](./documentation/PowerShellCpuid.CmdLets/GetCpuidImplementedLeafsCmdlet.md) |
-| Get-CpuidSubLeafs | CPUID-Sub-Leafs | Returns all implemented sub-leafs for the given leaf | [GetCpuidSubLeafs](./documentation/PowerShellCpuid.CmdLets/GetCpuidSubLeafsCmdlet.md) |
-| Get-CpuidImplementedProperties | CPUID-Implemented-Properties | Returns a collection of elements where each element represents an implemented property for given leaf, optionally you can specify the subleaf | [CpuidImplementedProperties](./documentation/PowerShellCpuid.CmdLets/CpuidImplementedPropertiesCmdlet.md) |
-| Get-GetCpuidLocateProperty | CPUID-Locate-Property | Returns a value that contains the location or locations of the cpuid property by its name | [GetCpuidLocateProperty](./documentation/PowerShellCpuid.CmdLets/GetCpuidLocatePropertyCmdlet.md) |
-| Get-GetCpuidProperty | CPUID-Property | Returns a reference that contains the information associated with the given property such as the key that identifies the property and its value | [GetCpuidProperty](./documentation/PowerShellCpuid.CmdLets/GetCpuidPropertyCmdlet.md) |
+|Get-CpuidIsAvailable|CPUID-Is-Available|Returns a value that indicates whether this system supports the [CPUID] instruction|[GetCpuidIsAvailable](./documentation/PowerShellCpuid.CmdLets/GetCpuidIsAvailableCmdlet.md)|
+|Get-GetCpuidImplementedLeafs|CPUID-Implemented-Leafs|Returns a collection of elements where each element represents an implemented leaf|[GetCpuidImplementedLeafs](./documentation/PowerShellCpuid.CmdLets/GetCpuidImplementedLeafsCmdlet.md)|
+|Get-CpuidSubLeafs|CPUID-Sub-Leafs|Returns all implemented sub-leafs for the given leaf|[GetCpuidSubLeafs](./documentation/PowerShellCpuid.CmdLets/GetCpuidSubLeafsCmdlet.md)|
+|Get-CpuidImplementedProperties|CPUID-Implemented-Properties|Returns a collection of elements where each element represents an implemented property for given leaf, optionally you can specify the subleaf|[CpuidImplementedProperties](./documentation/PowerShellCpuid.CmdLets/CpuidImplementedPropertiesCmdlet.md)|
+|Get-GetCpuidLocateProperty|CPUID-Locate-Property|Returns a value that contains the location or locations of the cpuid property by its name| [GetCpuidLocateProperty](./documentation/PowerShellCpuid.CmdLets/GetCpuidLocatePropertyCmdlet.md)|
+|Get-GetCpuidProperty|CPUID-Property | Returns a reference that contains the information associated with the given property such as the key that identifies the property and its value|[GetCpuidProperty](./documentation/PowerShellCpuid.CmdLets/GetCpuidPropertyCmdlet.md)|
 
 ## Library Documentation
 
