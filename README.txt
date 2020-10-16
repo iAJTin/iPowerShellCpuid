@@ -2,7 +2,7 @@
 What is iPowerShellCpuid?
 =========================
 
-iPowerShellCpuid is a PowerShell binary library implementation that allows us to obtain the CPUID information. 
+iPowerShellCpuid contains a collection of PowerShell Cmdlets that allow us to obtain the CPUID information. 
 
 
 v1.0.0
