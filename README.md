@@ -47,7 +47,7 @@ iPowerShellCpuid contains a collection of **PowerShell Cmdlets** that allow us t
 |Get-GetCpuidLocateProperty|CPUID-Locate-Property|Returns a value that contains the location or locations of the cpuid property by its name| [GetCpuidLocateProperty](./documentation/PowerShellCpuid.CmdLets/GetCpuidLocatePropertyCmdlet.md)|
 |Get-GetCpuidProperty|CPUID-Property|Returns a reference that contains the information associated with the given property such as the key that identifies the property and its value|[GetCpuidProperty](./documentation/PowerShellCpuid.CmdLets/GetCpuidPropertyCmdlet.md)|
 
-## Library Documentation
+# Documentation
 
  - For full code documentation, please see next link [documentation].
 
