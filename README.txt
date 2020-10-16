@@ -82,7 +82,7 @@ Examples
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 | Get-GetCpuidLocateProperty                                                                                                                       |
 ----------------------------------------------------------------------------------------------------------------------------------------------------
-| Name              Get-CpuidImplementedProperties                                                                                                 |
+| Name              Get-GetCpuidLocateProperty                                                                                                     |
 | Alias             CPUID-Locate-Property                                                                                                          |
 | Description       Returns a value that contains the location or locations of the cpuid property by its name.                                     |
 | Example(s) link   https://github.com/iAJTin/iPowerShellCpuid/blob/main/documentation/PowerShellCpuid.CmdLets/GetCpuidLocatePropertyCmdlet.md     |
