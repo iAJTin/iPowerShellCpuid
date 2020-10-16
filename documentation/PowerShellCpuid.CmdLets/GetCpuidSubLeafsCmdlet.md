@@ -40,12 +40,12 @@ Gets all implemented sub-leafs for 'Deterministic Cache Parameters' leaf
 
 PS> Get-CpuidSubLeafs -Leaf DeterministicCacheParameters | Cpuid-Sub-Leafs -Leaf DeterministicCacheParameters
 
-                      Leaf SubLeaf
-                      ---- -------
-terministicCacheParameters Main
-terministicCacheParameters One
-terministicCacheParameters Two
-terministicCacheParameters Three
+                        Leaf SubLeaf
+                        ---- -------
+DeterministicCacheParameters Main
+DeterministicCacheParameters One
+DeterministicCacheParameters Two
+DeterministicCacheParameters Three
 ```
 
 ## See Also
