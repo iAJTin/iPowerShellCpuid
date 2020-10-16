@@ -9,7 +9,7 @@ namespace PowerShellCpuid.CmdLets
 
     /// <summary>
     /// <para type="synopsis">
-    /// Returns a reference that contains the complete data of the given property, includes its name, value, unit in which the property is expressed, description and sheet to which it belongs.
+    /// Returns a reference that contains the complete data of the given property, includes its name, value, unit in which the property is expressed, description and leaf to which it belongs.
     /// </para>
     /// <para type="description">
     /// The value of the property <b>Property</b> must be obtained by calling the <b>Get-CpuidProperty</b>, for more information see the help

@@ -1,6 +1,6 @@
 # GetCpuidPropertyDetailCmdlet class
 
-Returns a reference that contains the complete data of the given property, includes its name, value, unit in which the property is expressed, description and sheet to which it belongs.
+Returns a reference that contains the complete data of the given property, includes its name, value, unit in which the property is expressed, description and leaf to which it belongs.
 
 The value of the property Property must be obtained by calling the Get-CpuidProperty, for more information see the help for the Get-CpuidProperty and the sample examples below.
 

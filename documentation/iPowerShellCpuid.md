@@ -9,7 +9,7 @@
 | class [GetCpuidIsAvailableCmdlet](PowerShellCpuid.CmdLets/GetCpuidIsAvailableCmdlet.md) | Returns a value that indicates whether this system supports the CPUID instruction. |
 | class [GetCpuidLocatePropertyCmdlet](PowerShellCpuid.CmdLets/GetCpuidLocatePropertyCmdlet.md) | Returns a value that contains the location or locations of the cpuid property by its name. |
 | class [GetCpuidPropertyCmdlet](PowerShellCpuid.CmdLets/GetCpuidPropertyCmdlet.md) | Returns a reference that contains the information associated with the given property such as the key that identifies the property and its value. |
-| class [GetCpuidPropertyDetailCmdlet](PowerShellCpuid.CmdLets/GetCpuidPropertyDetailCmdlet.md) | Returns a reference that contains the complete data of the given property, includes its name, value, unit in which the property is expressed, description and sheet to which it belongs. |
+| class [GetCpuidPropertyDetailCmdlet](PowerShellCpuid.CmdLets/GetCpuidPropertyDetailCmdlet.md) | Returns a reference that contains the complete data of the given property, includes its name, value, unit in which the property is expressed, description and leaf to which it belongs. |
 | class [GetCpuidSubLeafsCmdlet](PowerShellCpuid.CmdLets/GetCpuidSubLeafsCmdlet.md) | Returns all implemented sub-leafs for the given leaf. |
 
 ## PowerShellCpuid.CmdLets.Results namespace

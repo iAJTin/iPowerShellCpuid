@@ -1,7 +1,7 @@
 ﻿# Changelog
 All notable changes to this project will be documented in this file.
 
-## [1.0.0] - 2020-10-15
+## [1.0.0] - 2020-10-16
 
 ### Added
   
@@ -9,7 +9,7 @@ All notable changes to this project will be documented in this file.
   
 |Library|Version|Description|
 |:------|:------|:----------|
-| iPowerShellCpuid | 1.0.0.0 | CPUID PowerShell binary library |
+| iPowerShellCpuid | 1.0.0.0 | CPUID PowerShell Cmdlets library |
 
 - Solution structure, prepare solution structure to add future new specifications.
 
@@ -17,6 +17,7 @@ All notable changes to this project will be documented in this file.
         \ documentation       [Code documentation (md files)]
         \ references          [External references]
         \ src
-          \ iPowerShellCpuid  [PowerShell binary library] 
- 
+          \ iPowerShellCpuid  [PowerShell Cmdlets library] 
+        \ tools               [Build documentation script]
+
 [1.0.0]: https://github.com/iAJTin/iPoserShellCpuid/releases/tag/v1.0.0
