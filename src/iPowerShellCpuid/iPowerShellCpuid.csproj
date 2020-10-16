@@ -79,10 +79,12 @@
   <ItemGroup>
     <Compile Include="Cmdlets\Items\CpuidImplementedPropertiesCmdlet.cs" />
     <Compile Include="Cmdlets\Items\CpuidImplementedLeafsCmdlet.cs" />
+    <Compile Include="Cmdlets\Items\CpuidPropertyDetailCmdlet.cs" />
     <Compile Include="Cmdlets\Items\CpuidPropertyCmdlet.cs" />
     <Compile Include="Cmdlets\Items\CpuidLocatePropertyCmdlet.cs" />
     <Compile Include="Cmdlets\Items\CpuidSubLeafsCmdlet.cs" />
     <Compile Include="Cmdlets\Items\CpuidIsAvailableCmdlet.cs" />
+    <Compile Include="Cmdlets\Results\PropertyDetailResult.cs" />
     <Compile Include="Cmdlets\Results\PropertyDefinitionResult.cs" />
     <Compile Include="Cmdlets\Results\SubLeafResult.cs" />
     <Compile Include="Extensions\TypeExtensions.cs" />

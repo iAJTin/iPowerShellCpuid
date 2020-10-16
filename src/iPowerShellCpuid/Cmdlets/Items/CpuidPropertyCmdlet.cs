@@ -74,7 +74,7 @@ namespace PowerShellCpuid.CmdLets
         /// <value>
         /// A <see cref="PropertyDefinitionResult"/> reference that contains the location property data.
         /// </value>
-        [Parameter(Mandatory = true, ValueFromPipeline = true, HelpMessage = "Enter an instance of PropertyResult, use CpuidPropertyLocations for get one")]
+        [Parameter(Mandatory = true, ValueFromPipeline = true, HelpMessage = "Enter an instance of PropertyDefinitionResult, use CpuidLocateProperty for get one")]
         public PropertyDefinitionResult Property { get; set; }
         #endregion
 
