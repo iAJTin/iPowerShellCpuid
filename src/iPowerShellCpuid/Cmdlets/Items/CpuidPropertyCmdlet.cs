@@ -66,7 +66,7 @@ namespace PowerShellCpuid.CmdLets
     {
         #region public properties
 
-        #region [public] (PropertyDefinitionResult) Property: Gets or sets a value that contains the name of the leaf to consult
+        #region [public] (PropertyDefinitionResult) Property: Gets or sets a value that contains the location property data
         /// <summary>
         /// Gets or sets a value that contains the location property data.
         /// <para type="description">A <see cref="PropertyDefinitionResult"/> instance.</para>
