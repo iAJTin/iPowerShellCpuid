@@ -73,7 +73,7 @@ namespace PowerShellCpuid.CmdLets
     [Cmdlet(VerbsCommon.Get, "CpuidImplementedProperties")]
     [OutputType(typeof(PropertyDefinitionResult[]), typeof(string))]
     [Alias("CPUID-Implemented-Properties")]
-    public class CpuidImplementedPropertiesCmdlet : Cmdlet
+    public class GetCpuidImplementedPropertiesCmdlet : Cmdlet
     {
         #region public properties
 

@@ -1,26 +1,26 @@
-# CpuidImplementedPropertiesCmdlet class
+# GetCpuidImplementedPropertiesCmdlet class
 
 Returns a collection of elements where each element represents an implemented property for given leaf, optionally you can specify the subleaf.
 
 The elements are suitable to be used in the 'Get-CpuidProperty' operation as an input parameter of the '-Property' parameter.
 
 ```csharp
-public class CpuidImplementedPropertiesCmdlet : Cmdlet
+public class GetCpuidImplementedPropertiesCmdlet : Cmdlet
 ```
 
 ## Public Members
 
 | name | description |
 | --- | --- |
-| [CpuidImplementedPropertiesCmdlet](CpuidImplementedPropertiesCmdlet/CpuidImplementedPropertiesCmdlet.md)() | The default constructor. |
-| [Leaf](CpuidImplementedPropertiesCmdlet/Leaf.md) { get; set; } | Gets or sets a value that contains the name of the leaf. |
-| [SubLeaf](CpuidImplementedPropertiesCmdlet/SubLeaf.md) { get; set; } | Gets or sets a value that contains the name of the sub-leaf. This value is optional. |
+| [GetCpuidImplementedPropertiesCmdlet](GetCpuidImplementedPropertiesCmdlet/GetCpuidImplementedPropertiesCmdlet.md)() | The default constructor. |
+| [Leaf](GetCpuidImplementedPropertiesCmdlet/Leaf.md) { get; set; } | Gets or sets a value that contains the name of the leaf. |
+| [SubLeaf](GetCpuidImplementedPropertiesCmdlet/SubLeaf.md) { get; set; } | Gets or sets a value that contains the name of the sub-leaf. This value is optional. |
 
 ## Protected Members
 
 | name | description |
 | --- | --- |
-| override [ProcessRecord](CpuidImplementedPropertiesCmdlet/ProcessRecord.md)() | Process the command. |
+| override [ProcessRecord](GetCpuidImplementedPropertiesCmdlet/ProcessRecord.md)() | Process the command. |
 
 ## Examples
 

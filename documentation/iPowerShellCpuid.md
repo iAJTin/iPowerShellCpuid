@@ -4,8 +4,8 @@
 
 | public type | description |
 | --- | --- |
-| class [CpuidImplementedPropertiesCmdlet](PowerShellCpuid.CmdLets/CpuidImplementedPropertiesCmdlet.md) | Returns a collection of elements where each element represents an implemented property for given leaf, optionally you can specify the subleaf. |
 | class [GetCpuidImplementedLeafsCmdlet](PowerShellCpuid.CmdLets/GetCpuidImplementedLeafsCmdlet.md) | Returns a collection of elements where each element represents an implemented leaf. |
+| class [GetCpuidImplementedPropertiesCmdlet](PowerShellCpuid.CmdLets/GetCpuidImplementedPropertiesCmdlet.md) | Returns a collection of elements where each element represents an implemented property for given leaf, optionally you can specify the subleaf. |
 | class [GetCpuidIsAvailableCmdlet](PowerShellCpuid.CmdLets/GetCpuidIsAvailableCmdlet.md) | Returns a value that indicates whether this system supports the CPUID instruction. |
 | class [GetCpuidLocatePropertyCmdlet](PowerShellCpuid.CmdLets/GetCpuidLocatePropertyCmdlet.md) | Returns a value that contains the location or locations of the cpuid property by its name. |
 | class [GetCpuidPropertyCmdlet](PowerShellCpuid.CmdLets/GetCpuidPropertyCmdlet.md) | Returns a reference that contains the information associated with the given property such as the key that identifies the property and its value. |
