@@ -24,7 +24,7 @@ namespace PowerShellCpuid.CmdLets
     ///     and then with the result obtained, the 'Get-CpuidProperty' call tries to obtain the property information, remember that a property it is made up of your key and its value.
     ///     Finally we call 'Get-CpuidPropertyDetail' to obtain all the available information about the 'Manufacturer' property.
     /// 
-    ///     PS> Get-CpuidPropertyDetail -Property (Get-CpuidProperty -Property (Get-CpuidLocateProperty -Name Manufacturer))
+    ///     PS> Get-CpuidPropertyDetail -Property (Get-CpuidProperty -Property (Get-CpuidLocateProperty -Name Manufacturer)) | CPUID-Property-Detail -Property (CPUID-Property -Property (CPUID-Locate-Property -Name Manufacturer))
     ///
     ///     Name         : Manufacturer
     ///     Value        : GenuineIntel
@@ -43,7 +43,7 @@ namespace PowerShellCpuid.CmdLets
     ///     After the 'Get-CpuidProperty' call tries to obtain the property information with the result obtained, remember that a property consists of its key and its value.
     ///     Finally we call 'Get-CpuidPropertyDetail' to obtain all the available information about the 'CacheSize' property.
     /// 
-    ///     PS> Get-CpuidPropertyDetail -Property (Get-CpuidProperty -Property (Get-CpuidLocateProperty -Name CacheSize -SubLeaf Two))
+    ///     PS> Get-CpuidPropertyDetail -Property (Get-CpuidProperty -Property (Get-CpuidLocateProperty -Name CacheSize -SubLeaf Two)) | CPUID-Property-Detail -Property (CPUID-Property -Property (CPUID-Locate-Property -Name CacheSize -SubLeaf Two))
     ///
     ///     Name         : CacheSize
     ///     Value        : 262144
@@ -62,7 +62,7 @@ namespace PowerShellCpuid.CmdLets
     ///     and then with the result obtained, the 'Get-CpuidProperty' call tries to obtain the property information, remember that a property it is made up of your key and its value.
     ///     Finally we call 'Get-CpuidPropertyDetail' to obtain all the available information about the 'AVX2' property.
     /// 
-    ///     PS> Get-CpuidPropertyDetail -Property (Get-CpuidProperty -Property (Get-CpuidLocateProperty -Name AVX2))
+    ///     PS> Get-CpuidPropertyDetail -Property (Get-CpuidProperty -Property (Get-CpuidLocateProperty -Name AVX2)) | CPUID-Property-Detail -Property (CPUID-Property -Property (CPUID-Locate-Property -Name AVX2))
     ///
     ///     Name         : AVX2
     ///     Value        : True
