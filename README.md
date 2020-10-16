@@ -41,6 +41,11 @@ iPowerShellCpuid contains a collection of **PowerShell Cmdlets** that allow us t
 |Cmdlet|Alias|Description|Example(s)|
 |:------|:------|:----------|
 |Get-CpuidIsAvailable|CPUID-Is-Available|Returns a value that indicates whether this system supports the [CPUID] instruction|[GetCpuidIsAvailable](./documentation/PowerShellCpuid.CmdLets/GetCpuidIsAvailableCmdlet.md)|
+
+
+
+
+
 |Get-GetCpuidImplementedLeafs|CPUID-Implemented-Leafs|Returns a collection of elements where each element represents an implemented leaf|[GetCpuidImplementedLeafs](./documentation/PowerShellCpuid.CmdLets/GetCpuidImplementedLeafsCmdlet.md)|
 |Get-CpuidSubLeafs|CPUID-Sub-Leafs|Returns all implemented sub-leafs for the given leaf|[GetCpuidSubLeafs](./documentation/PowerShellCpuid.CmdLets/GetCpuidSubLeafsCmdlet.md)|
 |Get-CpuidImplementedProperties|CPUID-Implemented-Properties|Returns a collection of elements where each element represents an implemented property for given leaf, optionally you can specify the subleaf|[CpuidImplementedProperties](./documentation/PowerShellCpuid.CmdLets/CpuidImplementedPropertiesCmdlet.md)|
