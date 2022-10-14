@@ -15,14 +15,31 @@ iPowerShellCpuid contains a collection of **PowerShell Cmdlets** that allow us t
 
 **Currently only works on windows**
 
-# Install 
+# Install via PowerShellGallery
 
-#### PowerShellGallery
+- From PowerShellGallery
 
- - Currently in progress...
+<table>
+  <tr>
+    <td>
+      <a href="https://github.com/iAJTin/iPowerShellCpuid">
+        <img src="https://img.shields.io/badge/-iPowerShellCpuid-green.svg?style=flat"/>
+      </a>
+    </td>
+    <td>
+      <a href="https://www.powershellgallery.com/packages/iPowerShellCpuid/">
+        <img alt="PowerShellGallery Version" 
+             src="https://img.shields.io/powershellgallery/v/iPowerShellCpuid.svg?style=flat-square&label=iPowerShellCpuid" /> 
+      </a>
+    </td>  
+  </tr>
+</table>
 
-#### Manually
+- From package manager console
 
+```PM> Install-Module -Name iPowerShellCpuid```
+
+# Install Locally
 
 |Step|Description|
 |:------|:------|
@@ -30,9 +47,10 @@ iPowerShellCpuid contains a collection of **PowerShell Cmdlets** that allow us t
 |2|Copy the contents of the output folder ```Release``` or ```Debug``` into the folder created in the previous step. ```%programfiles%\WindowsPowerShell\Modules\iPowerShellCpuid```.|
 |3|Run Windows PowerShell|
 |4|For import **iPowerShellCpuid** module, please enter the following command: ```PS> Import-Module iPowerShellCpuid```|
-|5|Now to check that everything is correct, let's check if the [CPUID] instruction is available for our system, please enter the following command: ```PS> Get-CpuidIsAvailable``` or if you prefer, use its alias ```CPUID-Is-Available```|
-|6|In both cases, we must obtain ```True``` or ```False``` as a result, if this is so, perfect is already installed!!|
-|7|Enjoy ;)| 
+|5|Now try to get the information of available commands, please enter the following command: ```PS> Get-Help Cpuid```|
+|6|Now to check that everything is correct, let's check if the [CPUID] instruction is available for our system, please enter the following command: ```PS> Get-CpuidIsAvailable``` or if you prefer, use its alias ```CPUID-Is-Available```|
+|7|In both cases, we must obtain ```True``` or ```False``` as a result, if this is so, perfect is already installed!!|
+|8|Enjoy ;)| 
 
 # Usage
 

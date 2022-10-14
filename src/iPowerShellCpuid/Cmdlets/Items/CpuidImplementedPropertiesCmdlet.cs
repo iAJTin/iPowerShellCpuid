@@ -1,18 +1,18 @@
 ﻿
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Management.Automation;
+
+using iTin.Core.Hardware.Common;
+
+using iTin.Hardware.Specification;
+using iTin.Hardware.Specification.Cpuid;
+
+using PowerShellCpuid.CmdLets.Results;
+using PowerShellCpuid.Helpers;
+
 namespace PowerShellCpuid.CmdLets
 {
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Management.Automation;
-
-    using iTin.Core.Hardware.Common;
-
-    using iTin.Hardware.Specification;
-    using iTin.Hardware.Specification.Cpuid;
-
-    using Helpers;
-    using Results;
-
     /// <summary>
     /// <para type="synopsis">Returns a collection of elements where each element represents an implemented property for given leaf, optionally you can specify the subleaf.</para>
     /// <para type="description">The elements are suitable to be used in the 'Get-CpuidProperty' operation as an input parameter of the '-Property' parameter.</para>

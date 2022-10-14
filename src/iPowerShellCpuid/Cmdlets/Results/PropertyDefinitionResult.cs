@@ -1,11 +1,11 @@
 ﻿
+using iTin.Core.Hardware.Common;
+
+using iTin.Hardware.Specification;
+using iTin.Hardware.Specification.Cpuid;
+
 namespace PowerShellCpuid.CmdLets.Results
 {
-    using iTin.Core.Hardware.Common;
-
-    using iTin.Hardware.Specification;
-    using iTin.Hardware.Specification.Cpuid;
-
     /// <summary>
     /// Class that defines the location of a <see cref="CPUID"/> property.
     /// </summary>

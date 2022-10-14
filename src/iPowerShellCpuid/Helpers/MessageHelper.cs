@@ -1,11 +1,11 @@
 ﻿
+using System;
+using System.Management.Automation;
+
+using iTin.Hardware.Specification;
+
 namespace PowerShellCpuid.Helpers
 {
-    using System;
-    using System.Management.Automation;
-
-    using iTin.Hardware.Specification;
-
     /// <summary>
     /// Static class for handle the known error messages.
     /// </summary>

@@ -1,12 +1,12 @@
 ﻿
+using System.Management.Automation;
+
+using iTin.Core.Hardware.Common;
+
+using PowerShellCpuid.CmdLets.Results;
+
 namespace PowerShellCpuid.CmdLets
 {
-    using System.Management.Automation;
-
-    using iTin.Core.Hardware.Common;
-
-    using Results;
-
     /// <summary>
     /// <para type="synopsis">
     /// Returns a reference that contains the complete data of the given property, includes its name, value, unit in which the property is expressed, description and leaf to which it belongs.
@@ -31,7 +31,7 @@ namespace PowerShellCpuid.CmdLets
     ///     Units        : None
     ///     Leaf         : BasicInformation
     ///     FriendlyName : Manufacturer
-    ///     Desctiption  : CPU's manufacturer ID string
+    ///     Description  : CPU's manufacturer ID string
     /// 
     ///   </code>
     /// </example>
@@ -50,7 +50,7 @@ namespace PowerShellCpuid.CmdLets
     ///     Units        : Bytes
     ///     Leaf         : DeterministicCacheParameters
     ///     FriendlyName : Cache Size
-    ///     Desctiption  : Cache Size in Bytes
+    ///     Description  : Cache Size in Bytes
     /// 
     ///   </code>
     /// </example>
@@ -69,7 +69,7 @@ namespace PowerShellCpuid.CmdLets
     ///     Units        : None
     ///     Leaf         : ExtendedFeatures
     ///     FriendlyName : AVX2
-    ///     Desctiption  : Advanced Vector Extensions 2
+    ///     Description  : Advanced Vector Extensions 2
     /// 
     ///   </code>
     /// </example>
@@ -110,7 +110,7 @@ namespace PowerShellCpuid.CmdLets
                     Units = Property.Key.PropertyUnit.ToString(),
                     Leaf = Property.Key.StructureId.ToString(),
                     FriendlyName = Property.Key.GetPropertyName(),
-                    Desctiption = Property.Key.GetPropertyDescription()
+                    Description = Property.Key.GetPropertyDescription()
                 });
         }
         #endregion

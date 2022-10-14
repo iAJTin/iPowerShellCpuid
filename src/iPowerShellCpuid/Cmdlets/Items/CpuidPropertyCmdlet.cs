@@ -1,16 +1,16 @@
 ﻿
+using System.Management.Automation;
+
+using iTin.Core.Hardware.Common;
+
+using iTin.Hardware.Specification;
+using iTin.Hardware.Specification.Cpuid;
+
+using PowerShellCpuid.CmdLets.Results;
+using PowerShellCpuid.Helpers;
+
 namespace PowerShellCpuid.CmdLets
 {
-    using System.Management.Automation;
-
-    using iTin.Core.Hardware.Common;
-
-    using iTin.Hardware.Specification;
-    using iTin.Hardware.Specification.Cpuid;
-
-    using Helpers;
-    using Results;
-
     /// <summary>
     /// <para type="synopsis">
     /// Returns a reference that contains the information associated with the given property such as the key that identifies the property and its value.
@@ -100,7 +100,7 @@ namespace PowerShellCpuid.CmdLets
             LeafBase subLeaf = leaf[(int) Property.SubLeaf];
             QueryPropertyResult propertyResult = subLeaf.GetProperty(Property.PropertyKey);
 
-            WriteObject(propertyResult.Value);
+            WriteObject(propertyResult.Result);
         }
         #endregion
 

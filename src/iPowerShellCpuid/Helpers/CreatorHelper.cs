@@ -1,14 +1,14 @@
 ﻿
+using System;
+using System.Linq;
+
+using iTin.Core.Hardware.Common;
+
+using iTin.Hardware.Specification;
+using iTin.Hardware.Specification.Cpuid;
+
 namespace PowerShellCpuid.Helpers
 {
-    using System;
-    using System.Linq;
-
-    using iTin.Core.Hardware.Common;
-
-    using iTin.Hardware.Specification;
-    using iTin.Hardware.Specification.Cpuid;
-
     /// <summary>
     /// Static class for handle <see cref="CPUID"/> properties.
     /// </summary>

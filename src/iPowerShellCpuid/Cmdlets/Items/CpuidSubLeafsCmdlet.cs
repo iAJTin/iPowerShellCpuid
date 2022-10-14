@@ -1,16 +1,16 @@
 ﻿
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Management.Automation;
+
+using iTin.Hardware.Specification;
+using iTin.Hardware.Specification.Cpuid;
+
+using PowerShellCpuid.CmdLets.Results;
+using PowerShellCpuid.Helpers;
+
 namespace PowerShellCpuid.CmdLets
 {
-    using System.Collections.ObjectModel;
-    using System.Linq;
-    using System.Management.Automation;
-
-    using iTin.Hardware.Specification;
-    using iTin.Hardware.Specification.Cpuid;
-
-    using Helpers;
-    using Results;
-
     /// <summary>
     /// <para type="synopsis">Returns all implemented sub-leafs for the given leaf.</para>
     /// <para type="description">Execute the CPUID instruction for the given leaf (eax register) and show all the sub-leafs it implements (ecx register).</para>

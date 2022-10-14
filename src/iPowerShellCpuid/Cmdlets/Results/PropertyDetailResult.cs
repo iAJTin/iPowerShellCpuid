@@ -1,8 +1,8 @@
 ﻿
+using iTin.Hardware.Specification;
+
 namespace PowerShellCpuid.CmdLets.Results
 {
-    using iTin.Hardware.Specification;
-
     /// <summary>
     /// Class that defines the detail of a <see cref="CPUID"/> property.
     /// </summary>
@@ -60,6 +60,6 @@ namespace PowerShellCpuid.CmdLets.Results
         /// <value>
         /// Property description.
         /// </value>
-        public string Desctiption { get; set; }
+        public string Description { get; set; }
     }
 }

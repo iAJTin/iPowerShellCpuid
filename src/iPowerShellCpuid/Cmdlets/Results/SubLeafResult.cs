@@ -1,8 +1,8 @@
 ﻿
+using iTin.Hardware.Specification.Cpuid;
+
 namespace PowerShellCpuid.CmdLets.Results
 {
-    using iTin.Hardware.Specification.Cpuid;
-
     /// <summary>
     /// Class that defines the <see cref="SubLeaf"/> query consult.
     /// </summary>

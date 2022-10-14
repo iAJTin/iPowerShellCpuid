@@ -1,12 +1,12 @@
 ﻿
+using System;
+using System.Linq;
+using System.Reflection;
+
+using iTin.Core.Hardware.Common;
+
 namespace PowerShellCpuid.Helpers
 {
-    using System;
-    using System.Linq;
-    using System.Reflection;
-
-    using iTin.Core.Hardware.Common;
-
     /// <summary>
     /// Static class for handle <see cref="Type"/> type.
     /// </summary>

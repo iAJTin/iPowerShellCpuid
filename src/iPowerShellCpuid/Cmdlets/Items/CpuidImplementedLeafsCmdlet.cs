@@ -1,15 +1,15 @@
 ﻿
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Management.Automation;
+
+using iTin.Hardware.Specification;
+
+using PowerShellCpuid.CmdLets.Results;
+using PowerShellCpuid.Helpers;
+
 namespace PowerShellCpuid.CmdLets
 {
-    using System.Collections.ObjectModel;
-    using System.Linq;
-    using System.Management.Automation;
-
-    using iTin.Hardware.Specification;
-
-    using Helpers;
-    using Results;
-
     /// <summary>
     /// <para type="synopsis">Returns a collection of elements where each element represents an implemented leaf.</para>
     /// </summary>

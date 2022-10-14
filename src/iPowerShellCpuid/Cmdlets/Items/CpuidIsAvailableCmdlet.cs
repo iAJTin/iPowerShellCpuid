@@ -1,10 +1,10 @@
 ﻿
+using System.Management.Automation;
+
+using iTin.Hardware.Specification;
+
 namespace PowerShellCpuid.CmdLets
 {
-    using System.Management.Automation;
-
-    using iTin.Hardware.Specification;
-
     /// <summary>
     /// <para type="synopsis">Returns a value that indicates whether this system supports the CPUID instruction.</para>
     /// </summary>

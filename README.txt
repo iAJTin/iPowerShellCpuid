@@ -31,8 +31,7 @@ Added
 Install via PowerShellGallery
 =============================
 
-In progress..
-
+For more information, please see https://www.powershellgallery.com/packages/iPowerShellCpuid/1.0.0.0
 
 Usage
 =====
