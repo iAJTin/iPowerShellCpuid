@@ -13,7 +13,7 @@
 
 iPowerShellCpuid contains a collection of **PowerShell Cmdlets** that allow us to obtain the [CPUID] information.
 
-**Currently only works on windows**
+**Currently works on Windows and Mac**
 
 # Install via PowerShellGallery
 
