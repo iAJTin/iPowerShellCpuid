@@ -4,19 +4,33 @@ What is iPowerShellCpuid?
 
 iPowerShellCpuid contains a collection of PowerShell Cmdlets that allow us to obtain the CPUID information. 
 
+Changes in this version (v1.0.1)
+================================
+
+ - Update iCPUID library to v1.0.5
+ 
+ - Library versions for this version
+  
+   -------------------------------------------------------------------------------------------- 
+   | Library                                   Version       Description                      |
+   -------------------------------------------------------------------------------------------- 
+   | iPowerShellCpuid                          1.0.0.1       CPUID PowerShell Cmdlets library |
+   --------------------------------------------------------------------------------------------    
 
 v1.0.0
 ======
 
 Added
 
+ - Update iCPUID library to v1.0.3
+
  - Library versions for this version
 
--------------------------------------------------------------------------------------------------
-| Library                                   Version       Description                           |
--------------------------------------------------------------------------------------------------
-| iPowerShellCpuid                          1.0.0.0       CPUID PowerShell Cmdlets library      |
--------------------------------------------------------------------------------------------------
+   -------------------------------------------------------------------------------------------- 
+   | Library                                   Version       Description                      |
+   --------------------------------------------------------------------------------------------    
+   | iPowerShellCpuid                          1.0.0.0       CPUID PowerShell Cmdlets library |
+   -------------------------------------------------------------------------------------------- 
 
 - Solution structure, prepare solution structure to add future new specifications.
 
@@ -31,7 +45,7 @@ Added
 Install via PowerShellGallery
 =============================
 
-For more information, please see https://www.powershellgallery.com/packages/iPowerShellCpuid/1.0.0.0
+For more information, please see https://www.powershellgallery.com/packages/iPowerShellCpuid/1.0.1
 
 Usage
 =====

@@ -1,0 +1,1095 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<helpItems schema="maml" xmlns="http://msh">
+  <!-- Cmdlet: Get-CpuidImplementedLeafs -->
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Get-CpuidImplementedLeafs</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>CpuidImplementedLeafs</command:noun>
+      <maml:description>
+        <maml:para>Returns a collection of elements where each element represents an implemented leaf.</maml:para>
+      </maml:description>
+    </command:details>
+    <command:syntax>
+      <!-- Parameter set: __AllParameterSets -->
+      <command:syntaxItem>
+        <maml:name>Get-CpuidImplementedLeafs</maml:name>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters />
+    <command:inputTypes />
+    <command:returnValues>
+      <!-- OutputType: LeafResult[] -->
+      <command:returnValue>
+        <dev:type>
+          <maml:name>PowerShellCpuid.CmdLets.Results.LeafResult[]</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:returnValue>
+      <!-- OutputType: String -->
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:examples>
+      <command:example>
+        <maml:title>----------  EXAMPLE 1  ----------</maml:title>
+        <dev:code>If the CPUID instruction is not available, it always returns the message 'Can not continue. CPUID instruction is not available in this system'.
+
+PS&gt; Get-CPUIDImplementedLeafs
+Get-CPUIDImplementedLeafs : Can not continue. CPUID instruction is not available in this system
+...
+...
+...</dev:code>
+      </command:example>
+      <command:example>
+        <maml:title>----------  EXAMPLE 2  ----------</maml:title>
+        <dev:code>  The output may be different (depending on your system)!!!
+
+  PS&gt; Get-CPUIDImplementedLeafs | CPUID-Implemented-Leafs
+
+     LeafId HexadecimalLeafId                                       Leaf
+     ------ -----------------                                       ----
+          0 00000000                                    BasicInformation
+          1 00000001                            ProcessorInfoAndFeatures
+          2 00000002                                    CacheInformation
+          3 00000003                               ProcessorSerialNumber
+          4 00000004                        DeterministicCacheParameters
+          5 00000005                             MonitorAndMwaitFeatures
+          6 00000006                   ThermalAndPowerManagementFeatures
+          7 00000007                                    ExtendedFeatures
+          9 00000009                        DirectCacheAccessInformation
+         10 0000000A          ArchitecturalPerformanceMonitoringFeatures
+         11 0000000B                         ExtendedTopologyInformation
+         13 0000000D                  ProcessorExtendedStatesInformation
+         15 0000000F                ResourceDirectorTechnologyMonitoring
+         16 00000010                ResourceDirectorTechnologyAllocation
+         18 00000012                                                 Sgx
+         20 00000014                ProcessorTraceEnumerationInformation
+         21 00000015          TimeStampCounterAndNominalCoreCrystalClock
+-2147483648 80000000                  HighestExtendedFunctionImplemented
+-2147483647 80000001                    ExtendedProcessorInfoAndFeatures
+-2147483646 80000002                                ProcessorBrandString
+-2147483645 80000003                               ProcessorBrandString1
+-2147483644 80000004                               ProcessorBrandString2
+-2147483643 80000005                            L1CacheAndTlbIdentifiers
+-2147483642 80000006                             ExtendedL2CacheFeatures
+-2147483641 80000007                             AdvancedPowerManagement</dev:code>
+      </command:example>
+    </command:examples>
+  </command:command>
+  <!-- Cmdlet: Get-CpuidImplementedProperties -->
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Get-CpuidImplementedProperties</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>CpuidImplementedProperties</command:noun>
+      <maml:description>
+        <maml:para>Returns a collection of elements where each element represents an implemented property for given leaf, optionally you can specify the subleaf.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>The elements are suitable to be used in the 'Get-CpuidProperty' operation as an input parameter of the '-Property' parameter.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <!-- Parameter set: __AllParameterSets -->
+      <command:syntaxItem>
+        <maml:name>Get-CpuidImplementedProperties</maml:name>
+        <!-- Parameter: Leaf -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByValue)" position="named">
+          <maml:name>Leaf</maml:name>
+          <maml:description>
+            <maml:para>Leaf name</maml:para>
+            <maml:para>Possible values: BasicInformation, ProcessorInfoAndFeatures, CacheInformation, ProcessorSerialNumber, DeterministicCacheParameters, MonitorAndMwaitFeatures, ThermalAndPowerManagementFeatures, ExtendedFeatures, DirectCacheAccessInformation, ArchitecturalPerformanceMonitoringFeatures, ExtendedTopologyInformation, ProcessorExtendedStatesInformation, ResourceDirectorTechnologyMonitoring, ResourceDirectorTechnologyAllocation, Sgx, ProcessorTraceEnumerationInformation, TimeStampCounterAndNominalCoreCrystalClock, ProcessorFrequencyInformation, SystemOnChipInformation, HighestExtendedFunctionImplemented, ExtendedProcessorInfoAndFeatures, ProcessorBrandString, ProcessorBrandString1, ProcessorBrandString2, L1CacheAndTlbIdentifiers, ExtendedL2CacheFeatures, AdvancedPowerManagement, VirtualAndPhysicalAddressSizes, AmdEasterEgg</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">Leaf</command:parameterValue>
+          <dev:type>
+            <maml:name>iTin.Hardware.Specification.Cpuid.Leaf</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>BasicInformation</dev:defaultValue>
+          <command:parameterValueGroup>
+            <command:parameterValue required="false" variableLength="false">BasicInformation</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ProcessorInfoAndFeatures</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">CacheInformation</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ProcessorSerialNumber</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">DeterministicCacheParameters</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">MonitorAndMwaitFeatures</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ThermalAndPowerManagementFeatures</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ExtendedFeatures</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">DirectCacheAccessInformation</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ArchitecturalPerformanceMonitoringFeatures</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ExtendedTopologyInformation</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ProcessorExtendedStatesInformation</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ResourceDirectorTechnologyMonitoring</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ResourceDirectorTechnologyAllocation</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">Sgx</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ProcessorTraceEnumerationInformation</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">TimeStampCounterAndNominalCoreCrystalClock</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ProcessorFrequencyInformation</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">SystemOnChipInformation</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">HighestExtendedFunctionImplemented</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ExtendedProcessorInfoAndFeatures</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ProcessorBrandString</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ProcessorBrandString1</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ProcessorBrandString2</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">L1CacheAndTlbIdentifiers</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ExtendedL2CacheFeatures</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">AdvancedPowerManagement</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">VirtualAndPhysicalAddressSizes</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">AmdEasterEgg</command:parameterValue>
+          </command:parameterValueGroup>
+        </command:parameter>
+        <!-- Parameter: SubLeaf -->
+        <command:parameter required="false" globbing="false" pipelineInput="true (ByValue)" position="named">
+          <maml:name>SubLeaf</maml:name>
+          <maml:description>
+            <maml:para>Optional subleaf name</maml:para>
+            <maml:para>Possible values: Main, One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SubLeaf</command:parameterValue>
+          <dev:type>
+            <maml:name>iTin.Hardware.Specification.Cpuid.SubLeaf</maml:name>
+            <maml:uri />
+          </dev:type>
+          <command:parameterValueGroup>
+            <command:parameterValue required="false" variableLength="false">Main</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">One</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">Two</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">Three</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">Four</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">Five</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">Six</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">Seven</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">Eight</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">Nine</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">Ten</command:parameterValue>
+          </command:parameterValueGroup>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <!-- Parameter: Leaf -->
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByValue)" position="named">
+        <maml:name>Leaf</maml:name>
+        <maml:description>
+          <maml:para>Leaf name</maml:para>
+          <maml:para>Possible values: BasicInformation, ProcessorInfoAndFeatures, CacheInformation, ProcessorSerialNumber, DeterministicCacheParameters, MonitorAndMwaitFeatures, ThermalAndPowerManagementFeatures, ExtendedFeatures, DirectCacheAccessInformation, ArchitecturalPerformanceMonitoringFeatures, ExtendedTopologyInformation, ProcessorExtendedStatesInformation, ResourceDirectorTechnologyMonitoring, ResourceDirectorTechnologyAllocation, Sgx, ProcessorTraceEnumerationInformation, TimeStampCounterAndNominalCoreCrystalClock, ProcessorFrequencyInformation, SystemOnChipInformation, HighestExtendedFunctionImplemented, ExtendedProcessorInfoAndFeatures, ProcessorBrandString, ProcessorBrandString1, ProcessorBrandString2, L1CacheAndTlbIdentifiers, ExtendedL2CacheFeatures, AdvancedPowerManagement, VirtualAndPhysicalAddressSizes, AmdEasterEgg</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">Leaf</command:parameterValue>
+        <dev:type>
+          <maml:name>iTin.Hardware.Specification.Cpuid.Leaf</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>BasicInformation</dev:defaultValue>
+        <command:parameterValueGroup>
+          <command:parameterValue required="false" variableLength="false">BasicInformation</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ProcessorInfoAndFeatures</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">CacheInformation</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ProcessorSerialNumber</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">DeterministicCacheParameters</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">MonitorAndMwaitFeatures</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ThermalAndPowerManagementFeatures</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ExtendedFeatures</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">DirectCacheAccessInformation</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ArchitecturalPerformanceMonitoringFeatures</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ExtendedTopologyInformation</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ProcessorExtendedStatesInformation</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ResourceDirectorTechnologyMonitoring</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ResourceDirectorTechnologyAllocation</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">Sgx</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ProcessorTraceEnumerationInformation</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">TimeStampCounterAndNominalCoreCrystalClock</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ProcessorFrequencyInformation</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">SystemOnChipInformation</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">HighestExtendedFunctionImplemented</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ExtendedProcessorInfoAndFeatures</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ProcessorBrandString</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ProcessorBrandString1</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ProcessorBrandString2</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">L1CacheAndTlbIdentifiers</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ExtendedL2CacheFeatures</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">AdvancedPowerManagement</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">VirtualAndPhysicalAddressSizes</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">AmdEasterEgg</command:parameterValue>
+        </command:parameterValueGroup>
+      </command:parameter>
+      <!-- Parameter: SubLeaf -->
+      <command:parameter required="false" globbing="false" pipelineInput="true (ByValue)" position="named">
+        <maml:name>SubLeaf</maml:name>
+        <maml:description>
+          <maml:para>Optional subleaf name</maml:para>
+          <maml:para>Possible values: Main, One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">SubLeaf</command:parameterValue>
+        <dev:type>
+          <maml:name>iTin.Hardware.Specification.Cpuid.SubLeaf</maml:name>
+          <maml:uri />
+        </dev:type>
+        <command:parameterValueGroup>
+          <command:parameterValue required="false" variableLength="false">Main</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">One</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">Two</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">Three</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">Four</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">Five</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">Six</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">Seven</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">Eight</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">Nine</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">Ten</command:parameterValue>
+        </command:parameterValueGroup>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>iTin.Hardware.Specification.Cpuid.Leaf</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>Leaf name</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>iTin.Hardware.Specification.Cpuid.SubLeaf</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>Optional subleaf name</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <!-- OutputType: PropertyDefinitionResult[] -->
+      <command:returnValue>
+        <dev:type>
+          <maml:name>PowerShellCpuid.CmdLets.Results.PropertyDefinitionResult[]</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:returnValue>
+      <!-- OutputType: String -->
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:examples>
+      <command:example>
+        <maml:title>----------  EXAMPLE 1  ----------</maml:title>
+        <dev:code>If the CPUID instruction is not available, it always returns the message 'Can not continue. CPUID instruction is not available in this system'.
+
+PS&gt; Get-CpuidImplementedProperties -Leaf ProcessorInfoAndFeatures | CPUID-Implemented-Properties -Leaf ProcessorInfoAndFeatures
+Get-CpuidImplementedProperties : Can not continue. CPUID instruction is not available in this system
+...
+...
+...</dev:code>
+      </command:example>
+      <command:example>
+        <maml:title>----------  EXAMPLE 2  ----------</maml:title>
+        <dev:code>The output may be different (depending on your system)!!!
+
+The following example shows how to get the all implemented properties for the 'BasicInformation' CPUID leaf.
+The search result returns a collection of objects with the property information.
+The data type of the elements of the collection is suitable to be used as an input value in the '-Property' parameter
+of the Get-CpuidProperty operation.
+
+PS&gt; Get-CpuidImplementedProperties -Leaf BasicInformation | CPUID-Implemented-Properties -Leaf BasicInformation
+
+HexadecimalLeafId             Leaf SubLeaf PropertyKey
+-----------------             ---- ------- -----------
+00000000          BasicInformation Main Structure = BasicInformation, Property = HighestBasicFunction, Unit = None
+00000000          BasicInformation Main Structure = BasicInformation, Property = Manufacturer, Unit = None</dev:code>
+      </command:example>
+      <command:example>
+        <maml:title>----------  EXAMPLE 3  ----------</maml:title>
+        <dev:code>The output may be different (depending on your system)!!!
+
+The following example shows how to get the all implemented properties for the 'DeterministicCacheParameters' CPUID leaf and 'One' sub-leaf.
+The search result returns a collection of objects with the property information.
+The data type of the elements of the collection is suitable to be used as an input value in the '-Property' parameter
+of the Get-CpuidProperty operation.
+
+PS&gt; Get-CpuidImplementedProperties -Leaf DeterministicCacheParameters -SubLeaf One | CPUID-Implemented-Properties -Leaf DeterministicCacheParameters -SubLeaf One
+
+HexadecimalLeafId                         Leaf SubLeaf PropertyKey
+-----------------                         ---- ------- -----------
+00000004          DeterministicCacheParameters     One Structure = DeterministicCacheParameters, Property = CacheSize, Unit = Bytes
+00000004          DeterministicCacheParameters     One Structure = DeterministicCacheParameters, Property = CacheLevel, Unit = None
+00000004          DeterministicCacheParameters     One Structure = DeterministicCacheParameters, Property = CacheType, Unit = None
+00000004          DeterministicCacheParameters     One Structure = DeterministicCacheParameters, Property = WriteBack, Unit = None
+00000004          DeterministicCacheParameters     One Structure = DeterministicCacheParameters, Property = UseDirectMappedCache, Unit = None
+00000004          DeterministicCacheParameters     One Structure = DeterministicCacheParameters, Property = IsFullyAssociativeCache, Unit = None
+00000004          DeterministicCacheParameters     One Structure = DeterministicCacheParameters, Property = IsCacheInclusiveOfLowerLevels, Unit = None
+00000004          DeterministicCacheParameters     One Structure = DeterministicCacheParameters, Property = IsSelfInitializingCacheLevel, Unit = None
+00000004          DeterministicCacheParameters     One Structure = DeterministicCacheParameters, Property = MaximumLogicalProcessorCores, Unit = None
+00000004          DeterministicCacheParameters     One Structure = DeterministicCacheParameters, Property = MaximumPhysicalProcessorCores, Unit = None</dev:code>
+      </command:example>
+    </command:examples>
+  </command:command>
+  <!-- Cmdlet: Get-CpuidIsAvailable -->
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Get-CpuidIsAvailable</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>CpuidIsAvailable</command:noun>
+      <maml:description>
+        <maml:para>Returns a value that indicates whether this system supports the CPUID instruction.</maml:para>
+      </maml:description>
+    </command:details>
+    <command:syntax>
+      <!-- Parameter set: __AllParameterSets -->
+      <command:syntaxItem>
+        <maml:name>Get-CpuidIsAvailable</maml:name>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters />
+    <command:inputTypes />
+    <command:returnValues>
+      <!-- OutputType: Boolean -->
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Boolean</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:examples>
+      <command:example>
+        <maml:title>----------  EXAMPLE 1  ----------</maml:title>
+        <dev:code>PS&gt; Get-CpuidIsAvailable | CPUID-Is-Available
+True   </dev:code>
+      </command:example>
+    </command:examples>
+  </command:command>
+  <!-- Cmdlet: Get-CpuidLocateProperty -->
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Get-CpuidLocateProperty</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>CpuidLocateProperty</command:noun>
+      <maml:description>
+        <maml:para>Returns a value that contains the location or locations of the cpuid property by its name.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>If you get multiple results you can filter the result indicating the specific leaf and sub-leaf. For more information, please see the examples below.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <!-- Parameter set: __AllParameterSets -->
+      <command:syntaxItem>
+        <maml:name>Get-CpuidLocateProperty</maml:name>
+        <!-- Parameter: Name -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByValue)" position="named">
+          <maml:name>Name</maml:name>
+          <maml:description>
+            <maml:para>The property name to locate.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: Leaf -->
+        <command:parameter required="false" globbing="false" pipelineInput="true (ByValue)" position="named">
+          <maml:name>Leaf</maml:name>
+          <maml:description>
+            <maml:para>Optional leaf name</maml:para>
+            <maml:para>Possible values: BasicInformation, ProcessorInfoAndFeatures, CacheInformation, ProcessorSerialNumber, DeterministicCacheParameters, MonitorAndMwaitFeatures, ThermalAndPowerManagementFeatures, ExtendedFeatures, DirectCacheAccessInformation, ArchitecturalPerformanceMonitoringFeatures, ExtendedTopologyInformation, ProcessorExtendedStatesInformation, ResourceDirectorTechnologyMonitoring, ResourceDirectorTechnologyAllocation, Sgx, ProcessorTraceEnumerationInformation, TimeStampCounterAndNominalCoreCrystalClock, ProcessorFrequencyInformation, SystemOnChipInformation, HighestExtendedFunctionImplemented, ExtendedProcessorInfoAndFeatures, ProcessorBrandString, ProcessorBrandString1, ProcessorBrandString2, L1CacheAndTlbIdentifiers, ExtendedL2CacheFeatures, AdvancedPowerManagement, VirtualAndPhysicalAddressSizes, AmdEasterEgg</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">Leaf</command:parameterValue>
+          <dev:type>
+            <maml:name>iTin.Hardware.Specification.Cpuid.Leaf</maml:name>
+            <maml:uri />
+          </dev:type>
+          <command:parameterValueGroup>
+            <command:parameterValue required="false" variableLength="false">BasicInformation</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ProcessorInfoAndFeatures</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">CacheInformation</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ProcessorSerialNumber</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">DeterministicCacheParameters</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">MonitorAndMwaitFeatures</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ThermalAndPowerManagementFeatures</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ExtendedFeatures</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">DirectCacheAccessInformation</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ArchitecturalPerformanceMonitoringFeatures</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ExtendedTopologyInformation</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ProcessorExtendedStatesInformation</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ResourceDirectorTechnologyMonitoring</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ResourceDirectorTechnologyAllocation</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">Sgx</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ProcessorTraceEnumerationInformation</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">TimeStampCounterAndNominalCoreCrystalClock</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ProcessorFrequencyInformation</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">SystemOnChipInformation</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">HighestExtendedFunctionImplemented</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ExtendedProcessorInfoAndFeatures</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ProcessorBrandString</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ProcessorBrandString1</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ProcessorBrandString2</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">L1CacheAndTlbIdentifiers</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ExtendedL2CacheFeatures</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">AdvancedPowerManagement</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">VirtualAndPhysicalAddressSizes</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">AmdEasterEgg</command:parameterValue>
+          </command:parameterValueGroup>
+        </command:parameter>
+        <!-- Parameter: SubLeaf -->
+        <command:parameter required="false" globbing="false" pipelineInput="true (ByValue)" position="named">
+          <maml:name>SubLeaf</maml:name>
+          <maml:description>
+            <maml:para>Optional subleaf name</maml:para>
+            <maml:para>Possible values: Main, One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SubLeaf</command:parameterValue>
+          <dev:type>
+            <maml:name>iTin.Hardware.Specification.Cpuid.SubLeaf</maml:name>
+            <maml:uri />
+          </dev:type>
+          <command:parameterValueGroup>
+            <command:parameterValue required="false" variableLength="false">Main</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">One</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">Two</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">Three</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">Four</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">Five</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">Six</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">Seven</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">Eight</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">Nine</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">Ten</command:parameterValue>
+          </command:parameterValueGroup>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <!-- Parameter: Name -->
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByValue)" position="named">
+        <maml:name>Name</maml:name>
+        <maml:description>
+          <maml:para>The property name to locate.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: Leaf -->
+      <command:parameter required="false" globbing="false" pipelineInput="true (ByValue)" position="named">
+        <maml:name>Leaf</maml:name>
+        <maml:description>
+          <maml:para>Optional leaf name</maml:para>
+          <maml:para>Possible values: BasicInformation, ProcessorInfoAndFeatures, CacheInformation, ProcessorSerialNumber, DeterministicCacheParameters, MonitorAndMwaitFeatures, ThermalAndPowerManagementFeatures, ExtendedFeatures, DirectCacheAccessInformation, ArchitecturalPerformanceMonitoringFeatures, ExtendedTopologyInformation, ProcessorExtendedStatesInformation, ResourceDirectorTechnologyMonitoring, ResourceDirectorTechnologyAllocation, Sgx, ProcessorTraceEnumerationInformation, TimeStampCounterAndNominalCoreCrystalClock, ProcessorFrequencyInformation, SystemOnChipInformation, HighestExtendedFunctionImplemented, ExtendedProcessorInfoAndFeatures, ProcessorBrandString, ProcessorBrandString1, ProcessorBrandString2, L1CacheAndTlbIdentifiers, ExtendedL2CacheFeatures, AdvancedPowerManagement, VirtualAndPhysicalAddressSizes, AmdEasterEgg</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">Leaf</command:parameterValue>
+        <dev:type>
+          <maml:name>iTin.Hardware.Specification.Cpuid.Leaf</maml:name>
+          <maml:uri />
+        </dev:type>
+        <command:parameterValueGroup>
+          <command:parameterValue required="false" variableLength="false">BasicInformation</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ProcessorInfoAndFeatures</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">CacheInformation</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ProcessorSerialNumber</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">DeterministicCacheParameters</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">MonitorAndMwaitFeatures</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ThermalAndPowerManagementFeatures</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ExtendedFeatures</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">DirectCacheAccessInformation</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ArchitecturalPerformanceMonitoringFeatures</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ExtendedTopologyInformation</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ProcessorExtendedStatesInformation</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ResourceDirectorTechnologyMonitoring</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ResourceDirectorTechnologyAllocation</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">Sgx</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ProcessorTraceEnumerationInformation</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">TimeStampCounterAndNominalCoreCrystalClock</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ProcessorFrequencyInformation</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">SystemOnChipInformation</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">HighestExtendedFunctionImplemented</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ExtendedProcessorInfoAndFeatures</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ProcessorBrandString</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ProcessorBrandString1</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ProcessorBrandString2</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">L1CacheAndTlbIdentifiers</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ExtendedL2CacheFeatures</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">AdvancedPowerManagement</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">VirtualAndPhysicalAddressSizes</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">AmdEasterEgg</command:parameterValue>
+        </command:parameterValueGroup>
+      </command:parameter>
+      <!-- Parameter: SubLeaf -->
+      <command:parameter required="false" globbing="false" pipelineInput="true (ByValue)" position="named">
+        <maml:name>SubLeaf</maml:name>
+        <maml:description>
+          <maml:para>Optional subleaf name</maml:para>
+          <maml:para>Possible values: Main, One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">SubLeaf</command:parameterValue>
+        <dev:type>
+          <maml:name>iTin.Hardware.Specification.Cpuid.SubLeaf</maml:name>
+          <maml:uri />
+        </dev:type>
+        <command:parameterValueGroup>
+          <command:parameterValue required="false" variableLength="false">Main</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">One</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">Two</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">Three</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">Four</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">Five</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">Six</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">Seven</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">Eight</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">Nine</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">Ten</command:parameterValue>
+        </command:parameterValueGroup>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>The property name to locate.</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>iTin.Hardware.Specification.Cpuid.Leaf</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>Optional leaf name</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>iTin.Hardware.Specification.Cpuid.SubLeaf</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>Optional subleaf name</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <!-- OutputType: PropertyDefinitionResult -->
+      <command:returnValue>
+        <dev:type>
+          <maml:name>PowerShellCpuid.CmdLets.Results.PropertyDefinitionResult</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:returnValue>
+      <!-- OutputType: PropertyDefinitionResult[] -->
+      <command:returnValue>
+        <dev:type>
+          <maml:name>PowerShellCpuid.CmdLets.Results.PropertyDefinitionResult[]</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:returnValue>
+      <!-- OutputType: String -->
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:examples>
+      <command:example>
+        <maml:title>----------  EXAMPLE 1  ----------</maml:title>
+        <dev:code>If the CPUID instruction is not available, it always returns the message 'Can not continue. CPUID instruction is not available in this system'.
+
+PS&gt; Get-CpuidLocateProperty -Name Manufacturer
+Get-CpuidLocateProperty : Can not continue. CPUID instruction is not available in this system
+...
+...
+...</dev:code>
+      </command:example>
+      <command:example>
+        <maml:title>----------  EXAMPLE 2  ----------</maml:title>
+        <dev:code>The output may be different (depending on your system)!!!
+
+The following example shows how to get the location of the 'Manufacturer' property.
+The result of the search tells us that it belongs to the 'BasicInformation' leaf and is located in the 'Main' sub-leaf,
+additionally the 'Structure' property stores the key that identifies this property.
+
+Notice, as it only returns one element.
+
+PS&gt; Get-CpuidLocateProperty -Name Manufacturer | CPUID-Locate-Property -Name Manufacturer
+
+            Leaf SubLeaf HexadecimalLeafId PropertyKey
+            ---- ------- ----------------- -----------
+BasicInformation    Main 00000000          Structure = BasicInformation, Property = Manufacturer, Unit = None</dev:code>
+      </command:example>
+      <command:example>
+        <maml:title>----------  EXAMPLE 3  ----------</maml:title>
+        <dev:code>The output may be different (depending on your system)!!!
+
+The following example shows how to get the location of the 'CacheSize' property.
+The result of the search tells us that it belongs to the 'DeterministicCacheParameters' and 'ExtendedL2CacheFeatures' leafs and is also found in several sub-leafs.
+
+Notice, as it now returns an array containing the matches
+
+PS&gt; Get-CpuidLocateProperty -Name CacheSize | CPUID-Locate-Property -Name CacheSize
+
+                        Leaf SubLeaf HexadecimalLeafId PropertyKey
+                        ---- ------- ----------------- -----------
+DeterministicCacheParameters    Main 00000004          Structure = DeterministicCacheParameters, Property = CacheSize, Unit = Bytes
+DeterministicCacheParameters     One 00000004          Structure = DeterministicCacheParameters, Property = CacheSize, Unit = Bytes
+DeterministicCacheParameters     Two 00000004          Structure = DeterministicCacheParameters, Property = CacheSize, Unit = Bytes
+DeterministicCacheParameters   Three 00000004          Structure = DeterministicCacheParameters, Property = CacheSize, Unit = Bytes
+     ExtendedL2CacheFeatures    Main 80000006          Structure = ExtendedL2CacheFeatures, Property = CacheSize, Unit = KB</dev:code>
+      </command:example>
+      <command:example>
+        <maml:title>----------  EXAMPLE 4  ----------</maml:title>
+        <dev:code>The output may be different (depending on your system)!!!
+
+The following example shows how to get the location of the property 'CacheSize' but only that of the sub-leaf 'Two'.
+
+Notice, as it only returns one element.
+
+PS&gt; Get-CpuidLocateProperty -Name CacheSize -SubLeaf Two | CPUID-Locate-Property -Name CacheSize -SubLeaf Two
+
+                        Leaf SubLeaf HexadecimalLeafId PropertyKey
+                        ---- ------- ----------------- -----------
+DeterministicCacheParameters     Two 00000004          Structure = DeterministicCacheParameters, Property = CacheSize, Unit = Bytes</dev:code>
+      </command:example>
+      <command:example>
+        <maml:title>----------  EXAMPLE 5  ----------</maml:title>
+        <dev:code>The output may be different (depending on your system)!!!
+
+The following example shows how to get the location of the property 'CacheSize' but only that of the sub-leaf 'Main'.
+
+Notice, as it now returns an array containing the matches
+
+PS&gt; Get-CpuidLocateProperty -Name CacheSize -SubLeaf Main | CPUID-Locate-Property -Name CacheSize -SubLeaf Main
+
+                        Leaf SubLeaf HexadecimalLeafId PropertyKey
+                        ---- ------- ----------------- -----------
+DeterministicCacheParameters    Main 00000004          Structure = DeterministicCacheParameters, Property = CacheSize, Unit = Bytes
+     ExtendedL2CacheFeatures    Main 80000006          Structure = ExtendedL2CacheFeatures, Property = CacheSize, Unit = KB</dev:code>
+      </command:example>
+      <command:example>
+        <maml:title>----------  EXAMPLE 6  ----------</maml:title>
+        <dev:code>The output may be different (depending on your system)!!!
+
+The following example shows how to get the location of the 'CacheSize' property but only the one of the leaf 'ExtendedL2CacheFeatures' and sub-leaf 'Two'.
+
+Notice, as it only returns one element.
+
+PS&gt; Get-CpuidLocateProperty -Name CacheSize -Leaf ExtendedL2CacheFeatures -SubLeaf Main | CPUID-Locate-Property -Name CacheSize -Leaf ExtendedL2CacheFeatures -SubLeaf Main
+
+                        Leaf SubLeaf HexadecimalLeafId PropertyKey
+                        ---- ------- ----------------- -----------
+     ExtendedL2CacheFeatures    Main 80000006          Structure = ExtendedL2CacheFeatures, Property = CacheSize, Unit = KB</dev:code>
+      </command:example>
+    </command:examples>
+  </command:command>
+  <!-- Cmdlet: Get-CpuidProperty -->
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Get-CpuidProperty</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>CpuidProperty</command:noun>
+      <maml:description>
+        <maml:para>Returns a reference that contains the information associated with the given property such as the key that identifies the property and its value.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>The value of the property Property must be obtained by calling the Get-CpuidLocateProperty, for more information see the help for the Get-CpuidLocateProperty and the sample examples below.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <!-- Parameter set: __AllParameterSets -->
+      <command:syntaxItem>
+        <maml:name>Get-CpuidProperty</maml:name>
+        <!-- Parameter: Property -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByValue)" position="named">
+          <maml:name>Property</maml:name>
+          <maml:description>
+            <maml:para>A PropertyDefinitionResult instance.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">PropertyDefinitionResult</command:parameterValue>
+          <dev:type>
+            <maml:name>PowerShellCpuid.CmdLets.Results.PropertyDefinitionResult</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <!-- Parameter: Property -->
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByValue)" position="named">
+        <maml:name>Property</maml:name>
+        <maml:description>
+          <maml:para>A PropertyDefinitionResult instance.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">PropertyDefinitionResult</command:parameterValue>
+        <dev:type>
+          <maml:name>PowerShellCpuid.CmdLets.Results.PropertyDefinitionResult</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>PowerShellCpuid.CmdLets.Results.PropertyDefinitionResult</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>A PropertyDefinitionResult instance.</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <!-- OutputType: PropertyDefinitionResult -->
+      <command:returnValue>
+        <dev:type>
+          <maml:name>PowerShellCpuid.CmdLets.Results.PropertyDefinitionResult</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:returnValue>
+      <!-- OutputType: String -->
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:examples>
+      <command:example>
+        <maml:title>----------  EXAMPLE 1  ----------</maml:title>
+        <dev:code>If the CPUID instruction is not available, it always returns the message 'Can not continue. CPUID instruction is not available in this system'.
+
+PS&gt; Get-CpuidProperty -Property (Get-CpuidLocateProperty -Name Manufacturer) | CPUID-Property -Property (CPUID-Locate-Property -Name Manufacturer)
+Get-CpuidProperty : Can not continue. CPUID instruction is not available in this system
+...
+...
+...</dev:code>
+      </command:example>
+      <command:example>
+        <maml:title>----------  EXAMPLE 2  ----------</maml:title>
+        <dev:code>The output may be different (depending on your system)!!!
+
+To do this, first by calling 'Get-CpuidLocateProperty', we search among all the available properties of our system for those that call 'Manufacturer'
+and then with the result obtained, the 'Get-CpuidProperty' call tries to obtain the property information, remember that a property it is made up of your key and its value.
+
+PS&gt; Get-CpuidProperty -Property (Get-CpuidLocateProperty -Name Manufacturer) | CPUID-Property -Property (CPUID-Locate-Property -Name Manufacturer)
+
+Key                                                                Value
+---                                                                -----
+Structure = BasicInformation, Property = Manufacturer, Unit = None GenuineIntel</dev:code>
+      </command:example>
+      <command:example>
+        <maml:title>----------  EXAMPLE 3  ----------</maml:title>
+        <dev:code>The output may be different (depending on your system)!!!
+
+To do this, first by calling 'Get-CpuidLocateProperty', we search among all the available properties of our system for those that call 'CacheSize' and belong to sub-leaf 'Two'.
+After the 'Get-CpuidProperty' call tries to obtain the property information with the result obtained, remember that a property consists of its key and its value.
+
+PS&gt; Get-CpuidProperty -Property (Get-CpuidLocateProperty -Name CacheSize -SubLeaf Two) | CPUID-Property -Property (CPUID-Locate-Property -Name CacheSize -SubLeaf Two)
+
+Key                                                                           Value
+---                                                                           -----
+Structure = DeterministicCacheParameters, Property = CacheSize, Unit = Bytes 262144</dev:code>
+      </command:example>
+    </command:examples>
+  </command:command>
+  <!-- Cmdlet: Get-CpuidPropertyDetail -->
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Get-CpuidPropertyDetail</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>CpuidPropertyDetail</command:noun>
+      <maml:description>
+        <maml:para>Returns a reference that contains the complete data of the given property, includes its name, value, unit in which the property is expressed, description and leaf to which it belongs.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>The value of the property Property must be obtained by calling the Get-CpuidProperty, for more information see the help for the Get-CpuidProperty and the sample examples below.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <!-- Parameter set: __AllParameterSets -->
+      <command:syntaxItem>
+        <maml:name>Get-CpuidPropertyDetail</maml:name>
+        <!-- Parameter: Property -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByValue)" position="named">
+          <maml:name>Property</maml:name>
+          <maml:description>
+            <maml:para>A PropertyItem instance.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">PropertyItem</command:parameterValue>
+          <dev:type>
+            <maml:name>iTin.Core.Hardware.Common.PropertyItem</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <!-- Parameter: Property -->
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByValue)" position="named">
+        <maml:name>Property</maml:name>
+        <maml:description>
+          <maml:para>A PropertyItem instance.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">PropertyItem</command:parameterValue>
+        <dev:type>
+          <maml:name>iTin.Core.Hardware.Common.PropertyItem</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>iTin.Core.Hardware.Common.PropertyItem</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>A PropertyItem instance.</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <!-- OutputType: PropertyDetailResult -->
+      <command:returnValue>
+        <dev:type>
+          <maml:name>PowerShellCpuid.CmdLets.Results.PropertyDetailResult</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:examples>
+      <command:example>
+        <maml:title>----------  EXAMPLE 1  ----------</maml:title>
+        <dev:code>The output may be different (depending on your system)!!!
+
+To do this, first by calling 'Get-CpuidLocateProperty', we search among all the available properties of our system for those that call 'Manufacturer'
+and then with the result obtained, the 'Get-CpuidProperty' call tries to obtain the property information, remember that a property it is made up of your key and its value.
+Finally we call 'Get-CpuidPropertyDetail' to obtain all the available information about the 'Manufacturer' property.
+
+PS&gt; Get-CpuidPropertyDetail -Property (Get-CpuidProperty -Property (Get-CpuidLocateProperty -Name Manufacturer)) | CPUID-Property-Detail -Property (CPUID-Property -Property (CPUID-Locate-Property -Name Manufacturer))
+
+Name         : Manufacturer
+Value        : GenuineIntel
+Units        : None
+Leaf         : BasicInformation
+FriendlyName : Manufacturer
+Description  : CPU's manufacturer ID string</dev:code>
+      </command:example>
+      <command:example>
+        <maml:title>----------  EXAMPLE 2  ----------</maml:title>
+        <dev:code>The output may be different (depending on your system)!!!
+
+To do this, first by calling 'Get-CpuidLocateProperty', we search among all the available properties of our system for those that call 'CacheSize' and belong to sub-leaf 'Two'.
+After the 'Get-CpuidProperty' call tries to obtain the property information with the result obtained, remember that a property consists of its key and its value.
+Finally we call 'Get-CpuidPropertyDetail' to obtain all the available information about the 'CacheSize' property.
+
+PS&gt; Get-CpuidPropertyDetail -Property (Get-CpuidProperty -Property (Get-CpuidLocateProperty -Name CacheSize -SubLeaf Two)) | CPUID-Property-Detail -Property (CPUID-Property -Property (CPUID-Locate-Property -Name CacheSize -SubLeaf Two))
+
+Name         : CacheSize
+Value        : 262144
+Units        : Bytes
+Leaf         : DeterministicCacheParameters
+FriendlyName : Cache Size
+Description  : Cache Size in Bytes</dev:code>
+      </command:example>
+      <command:example>
+        <maml:title>----------  EXAMPLE 3  ----------</maml:title>
+        <dev:code>The output may be different (depending on your system)!!!
+
+To do this, first by calling 'Get-CpuidLocateProperty', we search among all the available properties of our system for those that call 'AVX2'
+and then with the result obtained, the 'Get-CpuidProperty' call tries to obtain the property information, remember that a property it is made up of your key and its value.
+Finally we call 'Get-CpuidPropertyDetail' to obtain all the available information about the 'AVX2' property.
+
+PS&gt; Get-CpuidPropertyDetail -Property (Get-CpuidProperty -Property (Get-CpuidLocateProperty -Name AVX2)) | CPUID-Property-Detail -Property (CPUID-Property -Property (CPUID-Locate-Property -Name AVX2))
+
+Name         : AVX2
+Value        : True
+Units        : None
+Leaf         : ExtendedFeatures
+FriendlyName : AVX2
+Description  : Advanced Vector Extensions 2</dev:code>
+      </command:example>
+    </command:examples>
+  </command:command>
+  <!-- Cmdlet: Get-CpuidSubLeafs -->
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Get-CpuidSubLeafs</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>CpuidSubLeafs</command:noun>
+      <maml:description>
+        <maml:para>Returns all implemented sub-leafs for the given leaf.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Execute the CPUID instruction for the given leaf (eax register) and show all the sub-leafs it implements (ecx register).</maml:para>
+    </maml:description>
+    <command:syntax>
+      <!-- Parameter set: __AllParameterSets -->
+      <command:syntaxItem>
+        <maml:name>Get-CpuidSubLeafs</maml:name>
+        <!-- Parameter: Leaf -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByValue)" position="named">
+          <maml:name>Leaf</maml:name>
+          <maml:description>
+            <maml:para>The name of the leaf to consult.</maml:para>
+            <maml:para>Possible values: BasicInformation, ProcessorInfoAndFeatures, CacheInformation, ProcessorSerialNumber, DeterministicCacheParameters, MonitorAndMwaitFeatures, ThermalAndPowerManagementFeatures, ExtendedFeatures, DirectCacheAccessInformation, ArchitecturalPerformanceMonitoringFeatures, ExtendedTopologyInformation, ProcessorExtendedStatesInformation, ResourceDirectorTechnologyMonitoring, ResourceDirectorTechnologyAllocation, Sgx, ProcessorTraceEnumerationInformation, TimeStampCounterAndNominalCoreCrystalClock, ProcessorFrequencyInformation, SystemOnChipInformation, HighestExtendedFunctionImplemented, ExtendedProcessorInfoAndFeatures, ProcessorBrandString, ProcessorBrandString1, ProcessorBrandString2, L1CacheAndTlbIdentifiers, ExtendedL2CacheFeatures, AdvancedPowerManagement, VirtualAndPhysicalAddressSizes, AmdEasterEgg</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">Leaf</command:parameterValue>
+          <dev:type>
+            <maml:name>iTin.Hardware.Specification.Cpuid.Leaf</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>BasicInformation</dev:defaultValue>
+          <command:parameterValueGroup>
+            <command:parameterValue required="false" variableLength="false">BasicInformation</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ProcessorInfoAndFeatures</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">CacheInformation</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ProcessorSerialNumber</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">DeterministicCacheParameters</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">MonitorAndMwaitFeatures</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ThermalAndPowerManagementFeatures</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ExtendedFeatures</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">DirectCacheAccessInformation</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ArchitecturalPerformanceMonitoringFeatures</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ExtendedTopologyInformation</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ProcessorExtendedStatesInformation</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ResourceDirectorTechnologyMonitoring</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ResourceDirectorTechnologyAllocation</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">Sgx</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ProcessorTraceEnumerationInformation</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">TimeStampCounterAndNominalCoreCrystalClock</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ProcessorFrequencyInformation</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">SystemOnChipInformation</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">HighestExtendedFunctionImplemented</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ExtendedProcessorInfoAndFeatures</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ProcessorBrandString</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ProcessorBrandString1</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ProcessorBrandString2</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">L1CacheAndTlbIdentifiers</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ExtendedL2CacheFeatures</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">AdvancedPowerManagement</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">VirtualAndPhysicalAddressSizes</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">AmdEasterEgg</command:parameterValue>
+          </command:parameterValueGroup>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <!-- Parameter: Leaf -->
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByValue)" position="named">
+        <maml:name>Leaf</maml:name>
+        <maml:description>
+          <maml:para>The name of the leaf to consult.</maml:para>
+          <maml:para>Possible values: BasicInformation, ProcessorInfoAndFeatures, CacheInformation, ProcessorSerialNumber, DeterministicCacheParameters, MonitorAndMwaitFeatures, ThermalAndPowerManagementFeatures, ExtendedFeatures, DirectCacheAccessInformation, ArchitecturalPerformanceMonitoringFeatures, ExtendedTopologyInformation, ProcessorExtendedStatesInformation, ResourceDirectorTechnologyMonitoring, ResourceDirectorTechnologyAllocation, Sgx, ProcessorTraceEnumerationInformation, TimeStampCounterAndNominalCoreCrystalClock, ProcessorFrequencyInformation, SystemOnChipInformation, HighestExtendedFunctionImplemented, ExtendedProcessorInfoAndFeatures, ProcessorBrandString, ProcessorBrandString1, ProcessorBrandString2, L1CacheAndTlbIdentifiers, ExtendedL2CacheFeatures, AdvancedPowerManagement, VirtualAndPhysicalAddressSizes, AmdEasterEgg</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">Leaf</command:parameterValue>
+        <dev:type>
+          <maml:name>iTin.Hardware.Specification.Cpuid.Leaf</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>BasicInformation</dev:defaultValue>
+        <command:parameterValueGroup>
+          <command:parameterValue required="false" variableLength="false">BasicInformation</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ProcessorInfoAndFeatures</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">CacheInformation</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ProcessorSerialNumber</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">DeterministicCacheParameters</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">MonitorAndMwaitFeatures</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ThermalAndPowerManagementFeatures</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ExtendedFeatures</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">DirectCacheAccessInformation</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ArchitecturalPerformanceMonitoringFeatures</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ExtendedTopologyInformation</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ProcessorExtendedStatesInformation</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ResourceDirectorTechnologyMonitoring</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ResourceDirectorTechnologyAllocation</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">Sgx</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ProcessorTraceEnumerationInformation</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">TimeStampCounterAndNominalCoreCrystalClock</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ProcessorFrequencyInformation</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">SystemOnChipInformation</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">HighestExtendedFunctionImplemented</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ExtendedProcessorInfoAndFeatures</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ProcessorBrandString</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ProcessorBrandString1</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ProcessorBrandString2</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">L1CacheAndTlbIdentifiers</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ExtendedL2CacheFeatures</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">AdvancedPowerManagement</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">VirtualAndPhysicalAddressSizes</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">AmdEasterEgg</command:parameterValue>
+        </command:parameterValueGroup>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>iTin.Hardware.Specification.Cpuid.Leaf</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>The name of the leaf to consult.</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <!-- OutputType: SubLeafResult[] -->
+      <command:returnValue>
+        <dev:type>
+          <maml:name>PowerShellCpuid.CmdLets.Results.SubLeafResult[]</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:returnValue>
+      <!-- OutputType: String -->
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:examples>
+      <command:example>
+        <maml:title>----------  EXAMPLE 1  ----------</maml:title>
+        <dev:code>If the CPUID instruction is not available, it always returns the message 'Can not continue. CPUID instruction is not available in this system'.
+
+PS&gt; Get-CpuidSubLeafs -Leaf DeterministicCacheParameters
+Get-CpuidSubLeafs : Can not continue. CPUID instruction is not available in this system
+...
+...
+...</dev:code>
+      </command:example>
+      <command:example>
+        <maml:title>----------  EXAMPLE 2  ----------</maml:title>
+        <dev:code>  The output may be different (depending on your system)!!!
+
+  Gets all implemented sub-leafs for 'Deterministic Cache Parameters' leaf
+
+  PS&gt; Get-CpuidSubLeafs -Leaf DeterministicCacheParameters | Cpuid-Sub-Leafs -Leaf DeterministicCacheParameters
+
+                        Leaf SubLeaf
+                        ---- -------
+DeterministicCacheParameters Main
+DeterministicCacheParameters One
+DeterministicCacheParameters Two
+DeterministicCacheParameters Three</dev:code>
+      </command:example>
+    </command:examples>
+  </command:command>
+</helpItems>
