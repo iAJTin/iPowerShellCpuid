@@ -41,6 +41,8 @@ iPowerShellCpuid contains a collection of **PowerShell Cmdlets** that allow us t
 
 # Install Locally
 
+### Windows
+
 |Step|Description|
 |:------|:------|
 |1|Create the ```iPowerShellCpuid``` folder in ```%programfiles%\WindowsPowerShell\Modules```|
