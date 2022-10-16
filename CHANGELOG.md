@@ -1,6 +1,14 @@
 ﻿# Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.0.2] - 
+
+### Added
+
+ - Add [documentation] for all available properties grouped by ```Leafs``` (Adds an entry in **README.md** file).
+ 
+   This information can be useful, because it groups all the searchable properties in one place.
+
 ## [1.0.1] - 2022-10-15
 
 ### Changed
@@ -34,7 +42,10 @@ All notable changes to this project will be documented in this file.
           \ iPowerShellCpuid  [PowerShell Cmdlets library] 
         \ tools               [CPUID PowerShell Cmdlets library]
 
+[1.0.2]: https://github.com/iAJTin/iPoserShellCpuid/releases/tag/v1.0.2
 [1.0.1]: https://github.com/iAJTin/iPoserShellCpuid/releases/tag/v1.0.1
 [1.0.0]: https://github.com/iAJTin/iPoserShellCpuid/releases/tag/v1.0.0
 
 [iCPUID]: https://github.com/iAJTin/iCPUID
+[documentation]: ./documentation/iCPUID/Cpuid.AvailableLeafs.md
+

@@ -70,7 +70,9 @@ Works on Windows, Linux and Mac.
 
 # Documentation
 
- - For full code documentation, please see next link [documentation].
+ - All available properties grouped by ```Leafs```, please see next link [properties_documentation].
+ 
+ - For full code documentation, please see next link [full_documentation].
 
 # How can I send feedback!!!
 
@@ -82,5 +84,7 @@ My email address is
 
 [email]: ./assets/email.png "email"
 [CPUID]: https://github.com/iAJTin/iCPUID
-[documentation]: ./documentation/iPowerShellCpuid.md
+
+[full_documentation]: ./documentation/iPowerShellCpuid.md
+[properties_documentation]: ./documentation/iCPUID/Cpuid.AvailableLeafs.md
 
