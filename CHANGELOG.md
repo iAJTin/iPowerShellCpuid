@@ -9,6 +9,10 @@ All notable changes to this project will be documented in this file.
  
    This information can be useful, because it groups all the searchable properties in one place.
 
+### Changed
+
+ - Update [iCPUID] library to **v1.0.6**
+
 ## [1.0.1] - 2022-10-15
 
 ### Changed
