@@ -37,7 +37,7 @@ Works on Windows, Linux and Mac.
 
 - From package manager console
 
-```PM> Install-Module -Name iPowerShellCpuid```
+```PM> Install-Module -Name iPowerShellCpuid -scope CurrentUser -Force```
 
 # Install Locally
 
