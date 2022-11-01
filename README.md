@@ -19,25 +19,28 @@ Works on Windows, Linux and Mac.
 
 - From PowerShellGallery
 
-<table>
-  <tr>
-    <td>
-      <a href="https://github.com/iAJTin/iPowerShellCpuid">
-        <img src="https://img.shields.io/badge/-iPowerShellCpuid-green.svg?style=flat"/>
-      </a>
-    </td>
-    <td>
-      <a href="https://www.powershellgallery.com/packages/iPowerShellCpuid/">
-        <img alt="PowerShellGallery Version" 
-             src="https://img.shields.io/powershellgallery/v/iPowerShellCpuid.svg?style=flat-square&label=iPowerShellCpuid" /> 
-      </a>
-    </td>  
-  </tr>
-</table>
+    <table>
+      <tr>
+        <td>
+          <a href="https://github.com/iAJTin/iPowerShellCpuid">
+            <img src="https://img.shields.io/badge/-iPowerShellCpuid-green.svg?style=flat"/>
+          </a>
+        </td>
+        <td>
+          <a href="https://www.powershellgallery.com/packages/iPowerShellCpuid/">
+            <img alt="PowerShellGallery Version" 
+                 src="https://img.shields.io/powershellgallery/v/iPowerShellCpuid.svg?style=flat-square&label=iPowerShellCpuid" /> 
+          </a>
+        </td>  
+      </tr>
+    </table>
 
 - From package manager console
 
-```PM> Install-Module -Name iPowerShellCpuid```
+    | User | Command |
+    |:-----|:--------|
+    | Administrator user |```PM> Install-Module -Name iPowerShellCpuid -Force``` |
+    | Current user |```PM> Install-Module -Name iPowerShellCpuid -scope CurrentUser -Force``` |
 
 # Install Locally
 
